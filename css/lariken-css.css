@@ -49,10 +49,12 @@ p {
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   cursor: help;
   border-bottom: 0;
-  text-decoration-skip-ink: none;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
 }
 
 address {
@@ -2957,6 +2959,7 @@ template {
 }
 
 .position-sticky {
+  position: -webkit-sticky !important;
   position: sticky !important;
 }
 
@@ -2976,8 +2979,9 @@ template {
   z-index: 1030;
 }
 
-@supports (position: sticky) {
+@supports ((position: -webkit-sticky) or (position: sticky)) {
   .sticky-top {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -3256,7 +3260,11 @@ a.text-dark:hover, a.text-dark:focus {
 
 @media (min-width: 768px) {
   .data-input {
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     min-width: 100px;
   }
@@ -3439,5 +3447,4 @@ aside .aside-evaluation .evaluation-keys div span::first-letter {
 body {
   font-family: "Roboto", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-
 /*# sourceMappingURL=lariken-css.css.map */
