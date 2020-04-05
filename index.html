@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="preconnect" href="fonts.googleapis.com" />
+    <link rel="prefetch" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="css/lariken-css.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <title>Lariken</title>
+  </head>
+  <body>
+    <div class="root px-2">
+      <div class="header">
+        <header class="position-relative d-flex py-3">
+          <img src="images/lariken-college-logo.png" width="290" style="margin: auto 0;" />
+          <!-- <div class="separator" role="separator"></div> -->
+          <div class="address flex-grow-1">
+            <address class="m-auto">
+              Harmony Gold Estate, Opp. Olonde Estate,<br />
+              Ologuneru, Ibadan, Oyo State.<br />
+              08034015600, 07066063262, 09080003940<br />
+              <a href="mailto:internationalexams@larikencollege.com">internationalexams@larikencollege.com</a><br />
+              <a href="//www.larikencollege.com">www.larikencollege.com</a>
+            </address>
+          </div>
+          <div class="students-image-box">
+            <img src="images/default-student.jpeg" />
+          </div>
+        </header>
+      </div>
+      <main role="main">
+        <div class="report px-4 py-3 mb-2">
+          <div style="text-align: center;font-weight: 600;font-size: 0.9rem;">1ST TERM REPORT</div>
+          <div class="mt-3">
+            <!-- fix student's name here -->
+            <div class="data-input px-2"><span>OLADEINDE MUTIAT B. (LAR/CL14/00254)</span></div>
+            <!-- fix student's data -->
+            <div class="d-flex flex-wrap my-3">
+              <div id="data-1" class="mr-md-auto">
+                <div class="data">
+                  <strong id="sctl">Score / Total:</strong>
+                  <span aria-labelledby="sctl" class="data-input-md">{{score}}</span>
+                </div>
+                <div class="data">
+                  <strong id="pic">Position in Class:</strong>
+                  <span aria-labelledby="pic" class="data-input-md">{{pos}}</span>
+                </div>
+                <div class="data">
+                  <strong id="ovrp">Overall Position:</strong>
+                  <span aria-labelledby="pic" class="data-input-md">{{overall_pos}}</span>
+                </div>
+              </div>
+
+              <div id="data-2" class="ml-md-auto m-xl-0 mx-xl-auto">
+                <div class="data">
+                  <strong id="tsis">Total Students in SSS 3:</strong>
+                  <span aria-labelledby="tsis" class="data-input-sm">{{students}}</span>
+                </div>
+                <div class="data">
+                  <strong id="tsic">Total Students in Class:</strong>
+                  <span aria-labelledby="tsic" class="data-input-sm">{{total_std}}</span>
+                </div>
+                <div class="data">
+                  <strong id="as">Average score:</strong>
+                  <span aria-labelledby="as" class="data-input-sm">{{avg_score}}</span>
+                </div>
+                <div class="data">
+                  <strong id="tp">Times Present:</strong>
+                  <span aria-labelledby="tp" class="data-input-sm">{{present}}</span>
+                </div>
+              </div>
+
+              <div id="data-3" class="mx-md-auto m-xl-0 ml-xl-auto">
+                <div class="data">
+                  <strong id="tm">Term:</strong>
+                  <span aria-labelledby="tm" class="data-input-md">{{term}}</span>
+                </div>
+                <div class="data">
+                  <strong id="sn">Session:</strong>
+                  <span aria-labelledby="sn" class="data-input-md">{{session}}</span>
+                </div>
+                <div class="data">
+                  <strong id="cs">Class:</strong>
+                  <span aria-labelledby="cs" class="data-input-md">{{class}}</span>
+                </div>
+                <div class="data">
+                  <strong id="ta">Times Absent:</strong>
+                  <span aria-labelledby="ta" class="data-input-md">{{times_absent}}</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="info">
+              <span>Next Term Begins: {{when}}</span>
+            </div>
+
+            <hr class="mx-5" style="color: rgba(0, 0, 0, 0.1);box-shadow: none;" />
+
+            <!-- tabbed report data & stats -->
+
+            <div class="d-flex">
+              <div class="stats">
+                <div class="table-container">
+                  <table class="tabbed-report">
+                    <thead>
+                      <tr>
+                        <th>Subjects</th>
+                        <th class="bottom-up"><span>Project (4)</span></th>
+                        <th class="bottom-up"><span>Assignment (4)</span></th>
+                        <th class="bottom-up"><span>Periodic Test (5)</span></th>
+                        <th class="bottom-up"><span>Class Exercise (6)</span></th>
+                        <th class="bottom-up"><span>Examination (80)</span></th>
+                        <th class="bottom-up"><span>Total Marks Obt. (100)</span></th>
+                        <th class="bottom-up"><span>Overall Highest Mark</span></th>
+                        <th class="bottom-up"><span>Overall Lowest Mark</span></th>
+                        <th class="bottom-up"><span>Subject Position In Class</span></th>
+                        <th class="bottom-up"><span>Overall Subject Position</span></th>
+                        <th class="bottom-up"><span>Grade</span></th>
+                        <th>Remarks</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Agricultural Science</td>
+                        <td>{{score[0]}}</td>
+                        <td>{{score[0]}}</td>
+                        <td>{{score[0]}}</td>
+                        <td>{{score[0]}}</td>
+                        <td>{{score[0]}}</td>
+                        <td>{{score[0]}}</td>
+                        <td>{{score[0]}}</td>
+                        <td>{{score[0]}}</td>
+                        <td>{{score[0]}}</td>
+                        <td>{{score[0]}}</td>
+                        <td>{{score[0]}}</td>
+                        <td>{{remark}}</td>
+                      </tr>
+                      <tr>
+                        <td>Biology</td>
+                        <td>{{score[1]}}</td>
+                        <td>{{score[1]}}</td>
+                        <td>{{score[1]}}</td>
+                        <td>{{score[1]}}</td>
+                        <td>{{score[1]}}</td>
+                        <td>{{score[1]}}</td>
+                        <td>{{score[1]}}</td>
+                        <td>{{score[1]}}</td>
+                        <td>{{score[1]}}</td>
+                        <td>{{score[1]}}</td>
+                        <td>{{score[1]}}</td>
+                        <td>{{remark}}</td>
+                      </tr>
+                      <tr>
+                        <td>Chemistry</td>
+                        <td>{{score[2]}}</td>
+                        <td>{{score[2]}}</td>
+                        <td>{{score[2]}}</td>
+                        <td>{{score[2]}}</td>
+                        <td>{{score[2]}}</td>
+                        <td>{{score[2]}}</td>
+                        <td>{{score[2]}}</td>
+                        <td>{{score[2]}}</td>
+                        <td>{{score[2]}}</td>
+                        <td>{{score[2]}}</td>
+                        <td>{{score[2]}}</td>
+                        <td>{{remark}}</td>
+                      </tr>
+                      <tr>
+                        <td>Civic Education</td>
+                        <td>{{score[3]}}</td>
+                        <td>{{score[3]}}</td>
+                        <td>{{score[3]}}</td>
+                        <td>{{score[3]}}</td>
+                        <td>{{score[3]}}</td>
+                        <td>{{score[3]}}</td>
+                        <td>{{score[3]}}</td>
+                        <td>{{score[3]}}</td>
+                        <td>{{score[3]}}</td>
+                        <td>{{score[3]}}</td>
+                        <td>{{score[3]}}</td>
+                        <td>{{remark}}</td>
+                      </tr>
+                      <tr>
+                        <td>Cosmetology</td>
+                        <td>{{score[4]}}</td>
+                        <td>{{score[4]}}</td>
+                        <td>{{score[4]}}</td>
+                        <td>{{score[4]}}</td>
+                        <td>{{score[4]}}</td>
+                        <td>{{score[4]}}</td>
+                        <td>{{score[4]}}</td>
+                        <td>{{score[4]}}</td>
+                        <td>{{score[4]}}</td>
+                        <td>{{score[4]}}</td>
+                        <td>{{score[4]}}</td>
+                        <td>{{remark}}</td>
+                      </tr>
+                      <tr>
+                        <td>Economics</td>
+                        <td>{{score[5]}}</td>
+                        <td>{{score[5]}}</td>
+                        <td>{{score[5]}}</td>
+                        <td>{{score[5]}}</td>
+                        <td>{{score[5]}}</td>
+                        <td>{{score[5]}}</td>
+                        <td>{{score[5]}}</td>
+                        <td>{{score[5]}}</td>
+                        <td>{{score[5]}}</td>
+                        <td>{{score[5]}}</td>
+                        <td>{{score[5]}}</td>
+                        <td>{{remark}}</td>
+                      </tr>
+                      <tr>
+                        <td>English Language</td>
+                        <td>{{score[6]}}</td>
+                        <td>{{score[6]}}</td>
+                        <td>{{score[6]}}</td>
+                        <td>{{score[6]}}</td>
+                        <td>{{score[6]}}</td>
+                        <td>{{score[6]}}</td>
+                        <td>{{score[6]}}</td>
+                        <td>{{score[6]}}</td>
+                        <td>{{score[6]}}</td>
+                        <td>{{score[6]}}</td>
+                        <td>{{score[6]}}</td>
+                        <td>{{remark}}</td>
+                      </tr>
+                      <tr>
+                        <td>Mathematics</td>
+                        <td>{{score[7]}}</td>
+                        <td>{{score[7]}}</td>
+                        <td>{{score[7]}}</td>
+                        <td>{{score[7]}}</td>
+                        <td>{{score[7]}}</td>
+                        <td>{{score[7]}}</td>
+                        <td>{{score[7]}}</td>
+                        <td>{{score[7]}}</td>
+                        <td>{{score[7]}}</td>
+                        <td>{{score[7]}}</td>
+                        <td>{{score[7]}}</td>
+                        <td>{{remark}}</td>
+                      </tr>
+                      <tr>
+                        <td>Physics</td>
+                        <td>{{score[8]}}</td>
+                        <td>{{score[8]}}</td>
+                        <td>{{score[8]}}</td>
+                        <td>{{score[8]}}</td>
+                        <td>{{score[8]}}</td>
+                        <td>{{score[8]}}</td>
+                        <td>{{score[8]}}</td>
+                        <td>{{score[8]}}</td>
+                        <td>{{score[8]}}</td>
+                        <td>{{score[8]}}</td>
+                        <td>{{score[8]}}</td>
+                        <td>{{remark}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="chart mt-3" style="background-color: #ffffff; padding: 1rem;">
+                  <canvas id="chart-canvas" height="70px"></canvas>
+                </div>
+              </div>
+
+              <aside>
+                <div class="aside-evaluation">
+                  <table>
+                    <thead>
+                      <h4>PSYCHOMOTOR AND AFFECTIVE DOMAIN</h4>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Punctuality</td>
+                        <td>{{punc_eval}}</td>
+                      </tr>
+                      <tr>
+                        <td>Neatness</td>
+                        <td>{{neat_eval}}</td>
+                      </tr>
+                      <tr>
+                        <td>Leadership</td>
+                        <td>{{lead_eval}}</td>
+                      </tr>
+                      <tr>
+                        <td>Demeanour</td>
+                        <td>{{demean_eval}}</td>
+                      </tr>
+                      <tr>
+                        <td>Honesty</td>
+                        <td>{{honest_eval}}</td>
+                      </tr>
+                      <tr>
+                        <td>Respect</td>
+                        <td>{{res_eval}}</td>
+                      </tr>
+                      <tr>
+                        <td>Mixing</td>
+                        <td>{{mix_eval}}</td>
+                      </tr>
+                      <tr>
+                        <td>Obedience</td>
+                        <td>{{obd_eval}}</td>
+                      </tr>
+                      <tr>
+                        <td>Literary</td>
+                        <td>{{lit_eval}}</td>
+                      </tr>
+                      <tr>
+                        <td>Sporting</td>
+                        <td>{{sport_eval}}</td>
+                      </tr>
+                      <tr>
+                        <td>Cultural</td>
+                        <td>{{cul_eval}}</td>
+                      </tr>
+                      <tr>
+                        <td>Technical</td>
+                        <td>{{tech_eval}}</td>
+                      </tr>
+                      <tr>
+                        <td>Club Society</td>
+                        <td>{{club_eval}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="evaluation-keys">
+                    <h4 class="text-center">GRADING KEYS</h4>
+                    <div>
+                      <span class="d-block">A - Excelent show of trait</span>
+                      <span class="d-block">B - Very good / High level</span>
+                      <span class="d-block">C - Good / Normal level</span>
+                      <span class="d-block">D - Low / Minimal level</span>
+                      <span class="d-block">E - Poor / No regard of the</span>
+                    </div>
+                  </div>
+                </div>
+              </aside>
+
+            </div><!-- d-flex before stats-->
+          </div>
+
+          <div class="footer mt-5">
+            <div class="d-flex">
+              <strong class="flex-shrink-0">CLASS TEACHER'S COMMENT:</strong> 
+              <span class="w-100">{{some_comment_from_class_teacher}}</span>
+            </div>
+            <div class="d-flex">
+              <strong class="flex-shrink-0">PRINCIPAL'S COMMENT:</strong>
+              <span class="w-100">{{some_comment_from_principal}}</span>
+            </div>
+            <div class="d-flex">
+              <div class="d-flex w-100">
+                <strong class="flex-shrink-0">DATE PRINTED:</strong>
+                <span class="w-100">{{date_printed}}</span>
+              </div>
+              <div class="d-flex w-100">
+                <strong class="flex-shrink-0">PRINCIPAL'S SIGNATURE:</strong>
+                <span class="w-100">{{png_or_jpg_sign}}</span>
+              </div>
+            </div>
+          </div>
+        </div><!--report-->
+      </main>
+    </div>
+    <script src="node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+    <script src="chart-worker.js"></script>
+    <script>
+      buildChart(document.querySelector('#chart-canvas'), {
+        subjects: ['Agric', 'Bio', 'Chem', 'C.Edu', 'Cos', 'Eco', 'Eng', 'Maths', 'Phy'],
+        scores: {
+          high: [100, 89, 72, 82, 97, 85, 66, 72, 69],
+          student: [82, 75, 62, 64, 56, 81, 66, 70, 57],
+          low: [54, 45, 62, 35, 46, 50, 31, 61, 40]
+        }
+      });
+    </script>
+  </body>
+</html>
