@@ -3351,7 +3351,6 @@ table.tabbed-report tbody tr:nth-of-type(even) {
 }
 
 table.tabbed-report th:not(.bottom-up) {
-  min-width: 200px;
   text-align: left;
   padding: 0rem 1rem 1rem;
   vertical-align: bottom;
@@ -3359,7 +3358,7 @@ table.tabbed-report th:not(.bottom-up) {
 }
 
 table.tabbed-report td {
-  padding: 1rem;
+  padding: 0.8rem 0.4rem;
 }
 
 table.tabbed-report td:first-of-type {
@@ -3373,7 +3372,7 @@ table.tabbed-report tr {
 table.tabbed-report tr th.bottom-up {
   text-align: center;
   border-top: 0;
-  padding: 210px 14px 3px;
+  padding: 200px 5px 3px;
   vertical-align: bottom;
   background-color: #ffffff;
 }
@@ -3424,7 +3423,7 @@ aside .aside-evaluation table tr:nth-of-type(even) {
 }
 
 aside .aside-evaluation .evaluation-keys {
-  margin-top: 6.4rem;
+  margin-top: 1.15rem;
   margin-right: 1.5rem;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
