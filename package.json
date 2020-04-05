@@ -4,15 +4,16 @@
   "description": "Private",
   "main": "index.js",
   "scripts": {
-    "css-build": "npm-run-all sass-nw postcss css-minify",
+    "css-build": "npm-run-all sass postcss css-minify",
     "postcss": "postcss --config ./postcss.config.js --replace css/lariken-css.css",
-    "sass-nw": "node-sass scss/ -o css/ --source-map true source-map-contents true --output-style expanded --precision 6",
-    "sass": "node-sass scss/ -o css/ --source-map true source-map-contents true --output-style expanded --precision 6 --watch",
+    "sass": "node-sass scss/ -o css/ --source-map true source-map-contents true --output-style expanded --precision 6",
+    "sass-watch": "node-sass scss/ -o css/ --source-map true source-map-contents true --output-style expanded --precision 6 --watch",
     "css-minify": "cleancss --level 1 --format breakWith=lf --source-map --source-map-inline-sources --output css/lariken-css.min.css css/lariken-css.css"
   },
   "author": "Lariken College",
   "license": "ISC",
   "devDependencies": {
+    "bootstrap": "^4.4.1",
     "autoprefixer": "^9.7.5",
     "clean-css-cli": "^4.3.0",
     "node-sass": "^4.13.1",
@@ -21,7 +22,6 @@
     "postcss-cli": "^7.1.0"
   },
   "dependencies": {
-    "bootstrap": "^4.4.1",
     "chart.js": "^2.9.3"
   }
 }
