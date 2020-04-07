@@ -3580,9 +3580,6 @@ body {
   html {
     font-size: 0.825rem;
   }
-  html * {
-    color: black;
-  }
   html table {
     border-collapse: collapse !important;
   }
