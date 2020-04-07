@@ -3352,13 +3352,17 @@ table.tabbed-report tbody tr:nth-of-type(even) {
 
 table.tabbed-report th:not(.bottom-up) {
   text-align: left;
-  padding: 0rem 1rem 1rem;
+  padding: 0rem 0.6rem 0.6rem;
   vertical-align: bottom;
   color: #ffffff;
 }
 
+table.tabbed-report th:not(.bottom-up):first-of-type {
+  min-width: 150px;
+}
+
 table.tabbed-report td {
-  padding: 0.8rem 0.4rem;
+  padding: 0.6rem;
 }
 
 table.tabbed-report td:first-of-type {
@@ -3403,6 +3407,7 @@ aside .aside-evaluation {
 
 aside .aside-evaluation table {
   border-collapse: collapse;
+  width: 100%;
   background-color: #ffffff;
   color: #000000;
   border-radius: 0 15px 15px 0;
@@ -3424,7 +3429,6 @@ aside .aside-evaluation table tr:nth-of-type(even) {
 
 aside .aside-evaluation .evaluation-keys {
   margin-top: 1.15rem;
-  margin-right: 1.5rem;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
   color: #000000;
@@ -3441,6 +3445,49 @@ aside .aside-evaluation .evaluation-keys div span {
 
 aside .aside-evaluation .evaluation-keys div span::first-letter {
   font-weight: 600;
+}
+
+div.footer {
+  font-size: 0.9rem;
+}
+
+div.footer div {
+  margin-bottom: 1.7rem;
+}
+
+div.footer strong.flex-shrink-0 {
+  margin: 0 1rem 0 0;
+}
+
+div.footer strong.flex-shrink-0 + span {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  flex-shrink: 1;
+}
+
+.print-button {
+  background-color: #ffffff;
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  color: purple;
+  box-shadow: 0 4px 3.5px rgba(0, 0, 0, 0.2);
+}
+
+.print-button:focus {
+  border-color: purple;
+  border-width: 0.09rem;
+  outline: none;
+}
+
+.print-button:active {
+  box-shadow: none;
+}
+
+@media print {
+  .print-button {
+    display: none;
+  }
 }
 
 @media print {

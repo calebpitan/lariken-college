@@ -88,14 +88,17 @@ table.tabbed-report {
   }
 
   th:not(.bottom-up) {
+    &:first-of-type {
+      min-width: 150px;
+    }
     text-align: left;
-    padding: 0rem 1rem 1rem;
+    padding: 0rem 0.6rem 0.6rem;
     vertical-align: bottom;
     color: #ffffff;
   }
 
   td {
-    padding: 0.8rem 0.4rem;
+    padding: 0.6rem;
     &:first-of-type {
       font-weight: 600;
     }
@@ -138,6 +141,7 @@ aside {
 
     table {
       border-collapse: collapse;
+      width: 100%;
       background-color: #ffffff;
       color: #000000;
       border-radius: 0 $max-border-rad $max-border-rad 0;
@@ -156,7 +160,6 @@ aside {
 
     .evaluation-keys {
       margin-top: 1.15rem;
-      margin-right: 1.5rem;
       border-right: 1px solid rgba($color: #000000, $alpha: .1);
       background-color: #ffffff;
       color: #000000;
@@ -173,5 +176,40 @@ aside {
         }
       }
     }
+  }
+}
+
+div.footer {
+  font-size: 0.9rem;
+  div {
+    margin-bottom: 1.7rem;
+  }
+  strong.flex-shrink-0 {
+    margin: 0 1rem 0 0;
+    & + span {
+      border-bottom: 1px solid rgba($color: #000000, $alpha: .2);
+      flex-shrink: 1;
+    }
+  }
+}
+
+.print-button {
+  background-color: #ffffff;
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  color: purple;
+  box-shadow: 0 4px 3.5px rgba($color: #000000, $alpha: .2);
+  &:focus {
+    border-color: purple;
+    border-width: 0.09rem;
+    outline: none;
+  }
+  &:active {
+    box-shadow: none;
+  }
+  @media print {
+    display: none;
   }
 }
