@@ -3298,8 +3298,8 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .stats {
-  flex-shrink: 1;
-  flex-basis: 100%;
+  flex-shrink: 0;
+  flex-basis: 78%;
   overflow-x: auto;
 }
 
@@ -3575,6 +3575,10 @@ div.footer strong.flex-shrink-0 + span {
   }
 }
 
+html {
+  font-size: 15px;
+}
+
 body {
   font-family: "Roboto", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -3584,7 +3588,7 @@ body {
     margin: 0mm !important;
   }
   html {
-    font-size: 0.825rem;
+    font-size: 11px !important;
   }
   html table {
     border-collapse: collapse !important;

@@ -14,6 +14,10 @@
 @import './report';
 @import '../node_modules/bootstrap/scss/print';
 
+html {
+  font-size: 15px;
+}
+
 body {
   font-family: 'Roboto', sans-serif, $font-family-base;
 }
@@ -23,7 +27,7 @@ body {
     margin: 0mm !important;
   }
   html {
-    font-size: 0.825rem;
+    font-size: 11px !important;
     table {
       border-collapse: collapse !important;
       & th,
