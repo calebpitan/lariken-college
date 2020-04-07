@@ -3299,7 +3299,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .stats {
   flex-shrink: 1;
-  flex-basis: 75%;
+  flex-basis: 100%;
   overflow-x: auto;
 }
 
@@ -3359,6 +3359,12 @@ table.tabbed-report th:not(.bottom-up) {
 
 table.tabbed-report th:not(.bottom-up):first-of-type {
   min-width: 150px;
+}
+
+@media print {
+  table.tabbed-report th:not(.bottom-up):first-of-type {
+    min-width: auto !important;
+  }
 }
 
 table.tabbed-report td {

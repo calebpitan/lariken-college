@@ -45,7 +45,7 @@ $max-border-rad: 15px;
 
 .stats {
   flex-shrink: 1;
-  flex-basis: 75%;
+  flex-basis: 100%;
   overflow-x: auto;
   & .chart {
     border-radius: 0 0 0 $max-border-rad;
@@ -90,6 +90,9 @@ table.tabbed-report {
   th:not(.bottom-up) {
     &:first-of-type {
       min-width: 150px;
+      @media print {
+        min-width: auto !important;
+      }
     }
     text-align: left;
     padding: 0rem 0.6rem 0.6rem;
