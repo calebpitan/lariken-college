@@ -10,7 +10,7 @@ $max-border-rad: 15px;
 }
 
 .report {
-  background-color: #f3bbf3; // #fde8fd; //
+  background-color: rgb(255, 200, 210); // #f7d6f7; // #fde8fd; //
   font-size: 0.93rem;
 }
 
@@ -54,7 +54,7 @@ $max-border-rad: 15px;
 .table-container {
   padding: 1rem;
   border-radius: $max-border-rad 0 0 0;
-  background-color: purple;
+  background-color: white;
   margin-top: 1rem;
   font-size: 0.9rem;
   overflow-x: auto;
@@ -87,6 +87,10 @@ table.tabbed-report {
     }
   }
 
+  th, td {
+    border: 1px solid rgba($color: #000000, $alpha: .1);
+  }
+
   th:not(.bottom-up) {
     &:first-of-type {
       min-width: 150px;
@@ -97,7 +101,6 @@ table.tabbed-report {
     text-align: left;
     padding: 0rem 0.6rem 0.6rem;
     vertical-align: bottom;
-    color: #ffffff;
   }
 
   td {
@@ -135,7 +138,7 @@ table.tabbed-report {
 
 aside {
   .aside-evaluation {
-    background-color: purple;
+    background-color: white;
     padding: 1rem;
     border-radius: 0 $max-border-rad $max-border-rad 0;
     margin-left: 1rem;
@@ -148,7 +151,7 @@ aside {
       background-color: #ffffff;
       color: #000000;
       border-radius: 0 $max-border-rad $max-border-rad 0;
-      box-shadow: 0.2rem 0.2rem 0.23rem rgba($color: #000000, $alpha: .6);
+      // box-shadow: 0.2rem 0.2rem 0.23rem rgba($color: #000000, $alpha: .6);
       tr {
         margin: 5px 0;
         td {
@@ -168,7 +171,7 @@ aside {
       color: #000000;
       padding-top: 1rem;
       border-radius: 0 $max-border-rad $max-border-rad 0;
-      box-shadow: 0.2rem 0.2rem 0.23rem rgba($color: #000000, $alpha: .6);
+      // box-shadow: 0.2rem 0.2rem 0.23rem rgba($color: #000000, $alpha: .6);
 
       div span {
         padding: .524rem 1rem;

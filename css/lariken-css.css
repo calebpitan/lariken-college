@@ -3243,7 +3243,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .report {
-  background-color: #f3bbf3;
+  background-color: #ffc8d2;
   font-size: 0.93rem;
 }
 
@@ -3310,7 +3310,7 @@ a.text-dark:hover, a.text-dark:focus {
 .table-container {
   padding: 1rem;
   border-radius: 15px 0 0 0;
-  background-color: purple;
+  background-color: white;
   margin-top: 1rem;
   font-size: 0.9rem;
   overflow-x: auto;
@@ -3350,11 +3350,14 @@ table.tabbed-report tbody tr:nth-of-type(even) {
   background-color: whitesmoke;
 }
 
+table.tabbed-report th, table.tabbed-report td {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 table.tabbed-report th:not(.bottom-up) {
   text-align: left;
   padding: 0rem 0.6rem 0.6rem;
   vertical-align: bottom;
-  color: #ffffff;
 }
 
 table.tabbed-report th:not(.bottom-up):first-of-type {
@@ -3403,7 +3406,7 @@ table.tabbed-report tr th.bottom-up span {
 }
 
 aside .aside-evaluation {
-  background-color: purple;
+  background-color: white;
   padding: 1rem;
   border-radius: 0 15px 15px 0;
   margin-left: 1rem;
@@ -3417,7 +3420,6 @@ aside .aside-evaluation table {
   background-color: #ffffff;
   color: #000000;
   border-radius: 0 15px 15px 0;
-  box-shadow: 0.2rem 0.2rem 0.23rem rgba(0, 0, 0, 0.6);
 }
 
 aside .aside-evaluation table tr {
@@ -3440,7 +3442,6 @@ aside .aside-evaluation .evaluation-keys {
   color: #000000;
   padding-top: 1rem;
   border-radius: 0 15px 15px 0;
-  box-shadow: 0.2rem 0.2rem 0.23rem rgba(0, 0, 0, 0.6);
 }
 
 aside .aside-evaluation .evaluation-keys div span {
